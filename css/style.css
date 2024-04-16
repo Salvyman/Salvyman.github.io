@@ -129,7 +129,7 @@ hr
 }
 
 .filter-button {
-    background-color: #4CAF50;
+    background-color: #d8b2d1;
     color: white;
     padding: 8px 16px;
     border: none;
@@ -139,7 +139,7 @@ hr
 }
 
 .filter-button:hover {
-    background-color: #45a049;
+    background-color: #ac0d84;
 }
 
 .photo {
