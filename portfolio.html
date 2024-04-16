@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images\title_pic.jpg">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html" class="button">Home</a>
+        <a href="aboutme.html" class="button">About Me</a>
+        <a href="portfolio.html" class="button">Portfolio</a>
+        <a href="contact.html" class="button">Contact</a>
+    </div>
+
+    <div class="header">
+        <h1>Portfolio</h1>
+    </div>
+    
+    <div class="introduction">
+        <h2>My Works</h2>
+    </div>
+
+    <div class="filter-container">
+        <div class="filter-buttons">
+            <button class="filter-button" data-filter="all">All</button>
+            <button class="filter-button" data-filter="composition">Composition</button>
+            <button class="filter-button" data-filter="sports">Sports</button>
+            <button class="filter-button" data-filter="photostory">Jax Photostory</button>
+            <button class="filter-button" data-filter="portraits">Portraits</button>
+            <button class="filter-button" data-filter="community">Community Events</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <!-- Grid items (images) -->
+            <div class="photo composition"><img src="Photography\Composition\Layers.jpg" alt="Image 1"></div>
+            <div class="photo composition"><img src="Photography\Composition\Lines.jpg" alt="Image 2"></div>
+            <div class="photo composition"><img src="Photography\Composition\Symmetry_.jpg" alt="Image3"></div>
+
+            <div class="photo photostory"><img src="Photography/Jax photostory/Back from walking.jpg" alt="Image 1"></div>
+            <div class="photo photostory"><img src="Photography\Jax photostory\Coming home.jpg" alt="Image 2"></div>
+            <div class="photo photostory"><img src="Photography\Jax photostory\Playing frisbee.jpg" alt="Image 3"></div>
+
+            <div class="photo sports"><img src="Photography\Sports\Baseball\KV1.JPG" alt="Image 1"></div>
+            <div class="photo sports"><img src="Photography/Sports/Frisbee/IMG_3440 (1).JPG" alt="Image 2"></div>
+            <div class="photo sports"><img src="Photography\Sports\Tennis\65FD09E3-DE5B-4508-9A96-96BC36474911.jpeg" alt="Image 3"></div>
+
+            <div class="photo portraits"><img src="Photography\Portraits\Heidi.jpg" alt="Image 2"></div>
+            <div class="photo portraits"><img src="Photography\Portraits\Jonathan.jpg" alt="Image 2"></div>
+            <div class="photo portraits"><img src="Photography\Portraits\Julie.jpg" alt="Image 2"></div>
+
+            <div class="photo community">
+                <video controls>
+                    <source src="videos\Karla - Arts in the Heart Festival PKG.MOV" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="photo community">
+                <video controls>
+                    <source src="videos\Ben - Chick-Fil-A PKG.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Add more grid items as needed -->
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    
+    <div class="introduction">
+        <h2>My Favorite Photos</h2>
+    </div>
+
+    <div class="scroll-container" id="scrollContainer">
+        <div class="scroll-item"><img src="Photography\Jax photostory\On a walk.jpg" alt="IMAGE 1"></div>
+        <div class="scroll-item"><img src="images\IMG_4447.jpg" alt="IMAGE 2"></div>
+        <div class="scroll-item"><img src="images\Roach.avif" alt="IMAGE 3"></div>
+        <div class="scroll-item"><img src="Photography\Sports\Frisbee\IMG_3454.JPG" alt="IMAGE 4"></div>
+    </div>
+
+    <div class="bottom">
+        <p>&#169 2024 Karla Vegazayas @ My Portolio Webpage</p>
+    </div>
+
+    <script src="scroll.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const photoVideos = document.querySelectorAll('.photo video');
+            
+            photoVideos.forEach(video => {
+                video.addEventListener('click', function () {
+                    // Toggle the visibility of the video container
+                    const videoContainer = video.parentElement.querySelector('.video-container');
+                    videoContainer.style.display = (videoContainer.style.display === 'none') ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
